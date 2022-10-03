@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Inkoop Project
+    </title>
+    <style>
+        #input{
+            margin:250px 0px 0px 250px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="input">
+    <input type="number" id="num" onchange="myInput()">
+    <p id="demo"></p>
+    </div>
+
+</body>
+<script>
+            
+    function myInput(){
+       
+        var number=document.getElementById("num").value;
+        let arr=[];
+        var d=parseInt(number)+2;
+        if(number<0){
+            document.getElementById("demo").innerHTML="Please Enter Positive Number";
+        }
+        else{
+            for(let i=0;i<3;i++)
+            {
+                
+                arr[i]=parseInt(number)+2;
+                number= parseInt(number)+2;
+            }
+            document.getElementById("demo").innerHTML = arr;
+        
+    }
+    
+}
+
+    </script>
+
+
+
+</html>
